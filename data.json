@@ -1,0 +1,101 @@
+[
+  {
+    "Name": "Duomo",
+    "Lat": 43.773449,
+    "Long": 11.256236,
+    "Img": "",
+    "Cat": "Church",
+    "Neighborhood": "Piazza del Duomo",
+    "Details": ""
+  },
+  {
+    "Name": "Uffizi",
+    "Lat": "43.464.0296",
+    "Long": 11.255311,
+    "Img": "",
+    "Cat": "Museum",
+    "Neighborhood": "Piazza della Signoria",
+    "Details": ""
+  },
+  {
+    "Name": "Ponte Vecchio",
+    "Lat": 43.768046,
+    "Long": 11.253155,
+    "Img": "",
+    "Cat": "Shopping",
+    "Neighborhood": "",
+    "Details": ""
+  },
+  {
+    "Name": "Galleria del'Accademia",
+    "Lat": 43.776803,
+    "Long": 11.258613,
+    "Img": "",
+    "Cat": "Museum",
+    "Neighborhood": "",
+    "Details": ""
+  },
+  {
+    "Name": "Basilica di Santa Croce",
+    "Lat": 43.768598,
+    "Long": 11.262405,
+    "Img": "",
+    "Cat": "Church",
+    "Neighborhood": "Piazza di Santa Croce",
+    "Details": ""
+  },
+  {
+    "Name": "Basilica Santa Maria Novella",
+    "Lat": 43.774293,
+    "Long": 11.249415,
+    "Img": "",
+    "Cat": "Church",
+    "Neighborhood": "",
+    "Details": ""
+  },
+  {
+    "Name": "Mercato Centale",
+    "Lat": 43.776599,
+    "Long": 11.254018,
+    "Img": "",
+    "Cat": "Eatting",
+    "Neighborhood": "Piazza del Mercato Centrale",
+    "Details": ""
+  },
+  {
+    "Name": "Leather Market",
+    "Lat": "",
+    "Long": "",
+    "Img": "",
+    "Cat": "Shopping",
+    "Neighborhood": "",
+    "Details": ""
+  },
+  {
+    "Name": "Palazzo Pitti",
+    "Lat": 43.765193,
+    "Long": 11.250032,
+    "Img": "",
+    "Cat": "Museum",
+    "Neighborhood": "Piazza de' Pitti",
+    "Details": ""
+  },
+  {
+    "Name": "Basilica di Santa Maria del Santo Spirito",
+    "Lat": 43.767571,
+    "Long": 11.248346,
+    "Img": "",
+    "Cat": "Church",
+    "Neighborhood": "Piazza di Santo Spirito",
+    "Details": ""
+  },
+  {
+    "Name": "Palazzo Vecchio",
+    "Lat": 43.769309,
+    "Long": "11.256051°",
+    "Img": "",
+    "Cat": "Museum",
+    "Neighborhood": "Piazza della Signoria",
+    "Details": ""
+  }
+]
