@@ -1,14 +1,46 @@
-$(document).ready(function() {
-  console.log('ready! main');
-  let map;
-  let data;
-  let markers
-  loadData();
-  initMap();
+function resolveAfter5Sec() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      initMap();
+		// console.log("promise")
+  }, 4000);
+  });
+}
 
+async function getData() {
+console.log("get data")
+
+  loadData()
+  var result = await resolveAfter5Sec();
+  console.log(result); // 10
+  console.log(data)
+}
+
+  let data = [];
+
+$(document).ready(function() {
+  console.log('ready! line');
+  getData()
 });
-// Initialize and add the map
+
+
+
+function loadData() {
+  $.getJSON("data.json", function(places) {
+    parseData(places);
+
+  });
+}
+
+function parseData(places) {
+  $.each(places, function(i) {
+    data.push(places[i])
+  });
+  // console.log(markers)
+}
+
 function initMap() {
+  console.log(data)
   var styleArray = [
     {
         "elementType": "labels.text",
@@ -335,213 +367,44 @@ function initMap() {
     mapTypeId: "roadmap",
     styles: styleArray
   });
-//   new MarkerClusterer(map, markers, {
-//   imagePath:
-//     "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-// });
-}
-// end of initMap
-//style
+  let markerArr = []
+  const markers = data.forEach(k => {
+    let latLng = new google.maps.LatLng(k.lat, k.lng);
 
-var styleArray = [
-    {
-        "featureType": "all",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "weight": "2.00"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#9c9c9c"
-            }
-        ]
-    },
-    {
-        "featureType": "all",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#eeeeee"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#7b7b7b"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#46bcec"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#c8d7d4"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#070707"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    }
-]
-
-
-function loadData() {
-  $.getJSON("data.json", function(places) {
-    parseData(places);
-
-  });
-}
-
-function parseData(places) {
-  $.each(places, function(i) {
-    data = places[i];
-
-    latLng = new google.maps.LatLng(data.lat, data.lng);
-    console.log(data.img)
-    var size =  new google.maps.Size(20, 32);
-
-
-     const markers = new google.maps.Marker({
+    let marker =  new google.maps.Marker({
       position: latLng,
-      icon: data.img,
+      label: k.name,
+      icon: k.img,
       map: map,
-      title: data.name
-    });
+      clickable: true
   });
-  // console.log(markers)
+  markerArr.push(marker)
+  });
+  console.log(markerArr)
+
+  new MarkerClusterer(map, markerArr, {
+  imagePath:
+    "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+});
 
 
+for(let i=0; i < markerArr.length; i++){
+  map.addListener("center_changed", () => {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(() => {
+      // map.panTo(markerArr[i].getPosition());
+    }, 3000);
+  });
+  markerArr[i].addListener("click", () => {
+    map.setZoom(16);
+    map.setCenter(markerArr[i].getPosition());
+  });
 }
 
 
-//
+
+
+
+
+}
