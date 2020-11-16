@@ -4,107 +4,131 @@
     "lat": 48.8584,
     "lng": 2.2945,
     "img": "img/paris-01.png",
-    "Cat": "Landmark",
+    "img_2": "img/ef.jpg",
+    "cat": "Landmark",
     "arr": "7",
-    "details": ""
+    "details": "",
+    "code": 1
   },
   {
     "name": "Lourve",
     "lat": 48.861,
     "lng": 2.3376,
     "img": "img/paris-03.png",
-    "Cat": "Museum",
-    "arr": "",
-    "details": "1"
+    "img_2": "img/lourve.jpg",
+    "cat": "Museum",
+    "arr": "1",
+    "details": "",
+    "code": 2
   },
   {
     "name": "Notre-Dame",
     "lat": 48.853,
     "lng": 2.3499,
     "img": "img/paris-04.png",
-    "Cat": "Chruch",
+    "img_2": "img/nd.jpg",
+    "cat": "Chruch",
     "arr": "4",
-    "details": ""
+    "details": "",
+    "code": 3
   },
   {
     "name": "Arc de Triomphe",
     "lat": 48.8738,
     "lng": 2.295,
     "img": "img/paris-02.png",
-    "Cat": "Landmark",
+    "img_2": "img/adt.jpg",
+    "cat": "Landmark",
     "arr": "8",
-    "details": ""
+    "details": "",
+    "code": 4
   },
   {
     "name": "Sacre-Coeur",
     "lat": 48.8867,
     "lng": 2.3431,
     "img": "img/paris-11.png",
-    "Cat": "Church",
-    "arr": "",
-    "details": "18"
+    "img_2": "img/sc.jpg",
+    "cat": "Church",
+    "arr": "18",
+    "details": "",
+    "code": 5
   },
   {
     "name": "Grand Palais",
     "lat": 48.8661,
     "lng": 2.3125,
     "img": "img/paris-06.png",
-    "Cat": "Palace",
+    "img_2": "img/gp.jpg",
+    "cat": "Palace",
     "arr": "8",
-    "details": ""
+    "details": "",
+    "code": 6
   },
   {
     "name": "Tuileries Garden",
     "lat": 48.8635,
     "lng": 2.33275,
     "img": "img/paris-09.png",
-    "Cat": "Garden",
+    "img_2": "img/tg.jpg",
+    "cat": "Garden",
     "arr": "1",
-    "details": ""
+    "details": "",
+    "code": 7
   },
   {
     "name": "Musee d'Orsay",
     "lat": 48.8600,
     "lng": 2.3266,
     "img": "img/paris-07.png",
-    "Cat": "Museum",
+    "img_2": "img/mo.jpg",
+    "cat": "Museum",
     "arr": "6",
-    "details": ""
+    "details": "",
+    "code": 8
   },
   {
-    "name": "Centre Pompidou",
+    "name": "Centre Pompcodeou",
     "lat": 48.8606,
     "lng": 2.3522,
     "img": "img/paris-08.png",
-    "Cat": "Museum",
+    "img_2": "img/pc.jpg",
+    "cat": "Museum",
     "arr": "3",
-    "details": ""
+    "details": "",
+    "code": 9
   },
   {
     "name": "Moulin Rouge",
     "lat": 48.8841,
     "lng": 2.3323,
     "img": "img/paris-05.png",
-    "Cat": "Theater",
+    "img_2": "img/mr.jpg",
+    "cat": "Theater",
     "arr": "18",
-    "details": ""
+    "details": "",
+    "code": 10
   },
   {
     "name": "Palais Garnier",
     "lat": 48.872,
     "lng": 2.3316,
     "img": "img/paris-10.png",
-    "Cat": "Opera",
+    "img_2": "img/pg.jpg",
+    "cat": "Opera",
     "arr": "2",
-    "details": ""
+    "details": "",
+    "code": 11
   },
   {
     "name": "Luxembourg Gardens",
     "lat": 48.8462,
     "lng": 2.3372,
     "img": "img/paris-12.png",
-    "Cat": "",
+    "img_2": "img/lg.jpg",
+    "cat": "",
     "arr": "6",
-    "details": ""
+    "details": "",
+    "code": 12
   }
 ]

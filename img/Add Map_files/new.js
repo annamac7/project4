@@ -354,14 +354,14 @@ function disaplyModal(place) {
   console.log(currPlace)
   let modal = $(`<div class="card expandedCard myCard position-absolute"  style="width: 14rem" id="hasCard" style="width: 18rem;">
   <i class="far fa-times-circle"></i>
-  <img src="${currPlace.img}" class="card-img-top" alt="${currPlace.name}">
+  <img src="${currPlace.img}" class="card-img-top" alt="${data[i].name}">
   <div class="card-body">
     <h5 class="card-title">${currPlace.name}</h5>
     <p class="card-text text-muted">Arrodisments: ${currPlace.arr}</p>
 
     <p class="card-text"><small class="text-muted">Lat: ${currPlace.lat} | Long: ${currPlace.lng}</small></p>
     <p class="card-text">${currPlace.details}</p>
-    <a href="#" class="myBtn btn" title="${currPlace.code}" id="triggerModal">Learn More</a>
+    <a href="#" class="btn myBtn" id="triggerModal">Learn More</a>
   </div>
 </div>`);
 
@@ -376,41 +376,18 @@ function disaplyModal(place) {
 }
 
 
-$(document).on('click', '#triggerModal', function(event) {
-
+$(document).on('click', '#triggerModal', function() {
   event.preventDefault();
-  let currCode = event.target.getAttribute('title')
 
-  let currPlace = data.find(k => k.code == currCode)
-console.log(currPlace)
-  let bigModal = $(`  <div class="myModal w-75 shadow-lg">
-            <a href="#"><i style="color: #272643" id="closeModal" class="far fa-times-circle fa-2x float-right m-3"></i></a>
-      <div class="jumbotron">
-
-        <img src="${currPlace.img_2}" class="rounded float-left img-thumbnail" alt="${currPlace.name}"/>
-        <h1 class="display-4">${currPlace.name}</h1>
-        <p class="lead">${currPlace.details}</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      </div>
-    </div>`);
+  let bigModal = $(`<div class="myModal animate__backInUp animate mx-auto my-5 shadow-lg rounded container"><i class="far fa-times-circle"></i></div>`);
   $("#modalHere").append(bigModal);
 });
 
 
-$(document).on('click', '#closeModal', function(){
-  event.preventDefault();
-  $('.myModal').remove();
-})
-
-
 
 $(document).on('click', '#listView', function(){
-  // $('#cardGrid').css("display", "flex");
-//add an if statement so it doesnt get appended each time
   event.preventDefault();
-  console.log("list");
-  $('#map').css("display", "none");
+  console.log("list")
   for(let i=0; i < data.length; i++){
     let card = $(`
       <div class="col mb-4"><div class="card"  style="width: 14rem" style="width: 18rem;">
@@ -421,18 +398,10 @@ $(document).on('click', '#listView', function(){
       <p class="card-text text-muted">Arrodisments: ${data[i].arr}</p>
 
       <p class="card-text"><small class="text-muted">Lat: ${data[i].lat} | Long: ${data[i].lng}</small></p>
-      <a href="#" class="btn myBtn" title="${data[i].code}" id="triggerModal">Learn More</a>
+      <a href="#" class="btn myBtn" id="triggerModal">Learn More</a>
     </div>
     </div>
     </div>`);
     $("#cardGrid").append(card);
-  };
-});
-
-$(document).on('click', '#mapView', function(){
-  event.preventDefault();
-  $('#map').css("display", "block");
-  $('#cardGrid').remove("display", "none");
-
-
+  }
 })
