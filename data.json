@@ -5,8 +5,8 @@
     "lng": 2.2945,
     "img": "img/paris-01.png",
     "Cat": "Landmark",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "7",
+    "details": ""
   },
   {
     "name": "Lourve",
@@ -14,8 +14,8 @@
     "lng": 2.3376,
     "img": "img/paris-03.png",
     "Cat": "Museum",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "",
+    "details": "1"
   },
   {
     "name": "Notre-Dame",
@@ -23,8 +23,8 @@
     "lng": 2.3499,
     "img": "img/paris-04.png",
     "Cat": "Chruch",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "4",
+    "details": ""
   },
   {
     "name": "Arc de Triomphe",
@@ -32,8 +32,8 @@
     "lng": 2.295,
     "img": "img/paris-02.png",
     "Cat": "Landmark",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "8",
+    "details": ""
   },
   {
     "name": "Sacre-Coeur",
@@ -41,8 +41,8 @@
     "lng": 2.3431,
     "img": "img/paris-11.png",
     "Cat": "Church",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "",
+    "details": "18"
   },
   {
     "name": "Grand Palais",
@@ -50,8 +50,8 @@
     "lng": 2.3125,
     "img": "img/paris-06.png",
     "Cat": "Palace",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "8",
+    "details": ""
   },
   {
     "name": "Tuileries Garden",
@@ -59,35 +59,35 @@
     "lng": 2.33275,
     "img": "img/paris-09.png",
     "Cat": "Garden",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "1",
+    "details": ""
   },
   {
     "name": "Musee d'Orsay",
     "lat": 48.8600,
     "lng": 2.3266,
-    "img": "img/paris-05.png",
+    "img": "img/paris-07.png",
     "Cat": "Museum",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "6",
+    "details": ""
   },
   {
     "name": "Centre Pompidou",
     "lat": 48.8606,
     "lng": 2.3522,
-    "img": "img/paris-07.png",
+    "img": "img/paris-08.png",
     "Cat": "Museum",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "3",
+    "details": ""
   },
   {
     "name": "Moulin Rouge",
     "lat": 48.8841,
     "lng": 2.3323,
-    "img": "img/paris-04.png",
+    "img": "img/paris-05.png",
     "Cat": "Theater",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "18",
+    "details": ""
   },
   {
     "name": "Palais Garnier",
@@ -95,8 +95,8 @@
     "lng": 2.3316,
     "img": "img/paris-10.png",
     "Cat": "Opera",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "2",
+    "details": ""
   },
   {
     "name": "Luxembourg Gardens",
@@ -104,7 +104,7 @@
     "lng": 2.3372,
     "img": "img/paris-12.png",
     "Cat": "",
-    "Neighborhood": "",
-    "Details": ""
+    "arr": "6",
+    "details": ""
   }
 ]
