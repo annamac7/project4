@@ -17,6 +17,8 @@ async function getData() {
 }
 
 let data = [];
+let hasAppended = false;
+
 
 $(document).ready(function() {
   console.log('ready! line');
@@ -353,7 +355,7 @@ function disaplyModal(place) {
   let currPlace = data.find(k => k.name == place)
   console.log(currPlace)
   let modal = $(`<div class="card expandedCard myCard position-absolute"  style="width: 14rem" id="hasCard" style="width: 18rem;">
-  <i class="far fa-times-circle"></i>
+  <a href="#"><i id="closeCard" class="far m-3 float-right fa-times-circle"></i></a>
   <img src="${currPlace.img}" class="card-img-top" alt="${currPlace.name}">
   <div class="card-body">
     <h5 class="card-title">${currPlace.name}</h5>
@@ -400,26 +402,28 @@ console.log(currPlace)
 
 $(document).on('click', '#closeModal', function(){
   event.preventDefault();
-  $('.myModal').remove();
+  $('.myModal').fadeOut("fast");
 })
-
 
 
 $(document).on('click', '#listView', function(){
   // $('#cardGrid').css("display", "flex");
 //add an if statement so it doesnt get appended each time
   event.preventDefault();
+
   console.log("list");
   $('#map').css("display", "none");
+  if(hasAppended){
+    $('#cardGrid').css("display", "flex");
+  } else {
   for(let i=0; i < data.length; i++){
     let card = $(`
-      <div class="col mb-4"><div class="card"  style="width: 14rem" style="width: 18rem;">
+      <div class="col mb-4"><div class="card shadow">
 
-    <img src="${data[i].img}" class="card-img-top mx-auto" alt="${data[i].name}" style="width: 50%">
+    <img src="${data[i].img}" class="card-img-top mx-auto" alt="${data[i].name}">
     <div class="card-body">
       <h5 class="card-title">${data[i].name}</h5>
       <p class="card-text text-muted">Arrodisments: ${data[i].arr}</p>
-
       <p class="card-text"><small class="text-muted">Lat: ${data[i].lat} | Long: ${data[i].lng}</small></p>
       <a href="#" class="btn myBtn" title="${data[i].code}" id="triggerModal">Learn More</a>
     </div>
@@ -427,12 +431,18 @@ $(document).on('click', '#listView', function(){
     </div>`);
     $("#cardGrid").append(card);
   };
+}
+  hasAppended = true;
 });
 
 $(document).on('click', '#mapView', function(){
   event.preventDefault();
   $('#map').css("display", "block");
-  $('#cardGrid').remove("display", "none");
+  $('#cardGrid').css("display", "none");
+});
 
-
-})
+$(document).on('click', '#closeCard', function(){
+  event.preventDefault();
+  $('.myCard').fadeOut("fast");
+  $('.myCard').remove()
+});

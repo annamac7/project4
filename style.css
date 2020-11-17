@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 /* Set the size of the div element that contains the map */
 #map {
   height: 700px;
   /* The height is 400 pixels */
-  width: 100%;
+  width: 90%;
+  margin: auto;
+
   /* The width is the width of the web page */
 }
+
 .animate {
   display: inline-block !important;
 }
-
 
 #logo {
   position: absolute;
@@ -21,6 +22,9 @@
   height: 50px;
 }
 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .hero-container {
   background: blue;
@@ -48,17 +52,26 @@
 
 #hero-title p {
   width: 30%;
+}
 
+h5 {
+  color: #212529;
 }
 
 .hero-container div {
   padding: 30px;
 }
 
+#outline {
+  width: 60%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+  display: block;
+}
 
 .left-side {
   background: #f7f3f3;
-
   width: 35vw;
   height: 100vh;
 }
@@ -71,41 +84,60 @@
   background-size: cover;
 }
 
+.black-bg {
+  background: #212529;
+  color: white;
+}
 
 .myCard {
-  top: 1000px;
+  top: 1500px;
   left: 200px;
   z-index: 1;
 }
 
-
-
 .myBtn {
-  color:#272643;
-  background: #bae8e8;
+  border-style: double !important;
+  font-family: 'Montserrat', sans-serif;
+  border-color: white;
+  color: white;
   border-radius: 10px;
-  opacity: .8;
+
 }
 
 /* edf3f3  */
 .myBtn:hover {
-  opacity: 1;
-  color: #272643;
-}
-/* bae8e8 */
 
+  color: #212529;
+  background: white;
+}
+
+/* bae8e8 */
 .myModal {
   background: #edf3f3;
   height: 70vh;
   position: absolute;
-  top: 800px;
+  top: 1300px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index:1;
+  z-index: 1;
 }
 
 .modalImg {
-    max-width: 300px;
+  max-width: 300px;
+}
+
+#cardGrid .card {
+  border: none;
+  height: 350px;
+  width: 270px;
+}
+
+#cardGrid .card img {
+  width: 60%;
+}
+
+#cardGrid .myBtn {
+  background: #212529 !important;
 }
