@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 /* Set the size of the div element that contains the map */
 #map {
   height: 700px;
   /* The height is 400 pixels */
   width: 90%;
   margin: auto;
-
-  /* The width is the width of the web page */
 }
 
 .animate {
@@ -20,6 +19,28 @@
   left: 10px;
   width: 70px;
   height: 50px;
+}
+
+/* inspired by https://codepen.io/lloopp/pen/XWJKMNr */
+#arrow-container {
+  animation: bounce 2000ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 1;
+}
+
+#arrow {
+  color: black;
+  cursor: pointer;
+}
+
+#arrow-container:hover {
+  opacity: .3;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+    opacity: .3
+  }
 }
 
 p {
@@ -55,7 +76,7 @@ p {
 }
 
 h5 {
-  color: #212529;
+  color: #1e1f21;
 }
 
 .hero-container div {
@@ -64,9 +85,8 @@ h5 {
 
 #outline {
   width: 60%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: block;
 }
 
@@ -85,7 +105,7 @@ h5 {
 }
 
 .black-bg {
-  background: #212529;
+  background: #1e1f21;
   color: white;
 }
 
@@ -101,13 +121,11 @@ h5 {
   border-color: white;
   color: white;
   border-radius: 10px;
-
 }
 
 /* edf3f3  */
 .myBtn:hover {
-
-  color: #212529;
+  color: #1e1f21;
   background: white;
 }
 
@@ -122,22 +140,149 @@ h5 {
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
+  color: #1e1f21;
+}
+
+.card-title {
+  font-family: 'Prata', serif !important;
+}
+
+.display-4 {
+  font-family: 'Prata', serif !important;
 }
 
 .modalImg {
   max-width: 300px;
 }
 
-#cardGrid .card {
+.card {
   border: none;
-  height: 350px;
+  height: 400px;
   width: 270px;
 }
 
-#cardGrid .card img {
-  width: 60%;
+.card img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-#cardGrid .myBtn {
-  background: #212529 !important;
+#closeCard {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+  right: 0;
+  border-radius: 50%;
+}
+
+ .myBtn {
+  background: #1e1f21 !important;
+}
+
+ .myBtn:hover {
+  background: white !important;
+  border: 1px solid #1e1f21;
+}
+
+
+
+/* galaxy inpired by https://jsfiddle.net/psullivan6/ma6e78m0/*/
+@keyframes twinkle_one {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle_two {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle_three {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.galaxy {
+  z-index: 1;
+width: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: relative;
+  margin: 0 auto;
+  background: #1e1f21;
+  /* background: yellow; */
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+}
+
+.star-type1 {
+  width: 1px;
+  height: 1px;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px white;
+  animation: twinkle_one 3s ease-in-out infinite;
+}
+
+.star-type2 {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+
+  box-shadow: 0 0 2px 1px white;
+
+  animation: twinkle_two 12s ease-in-out infinite;
+}
+
+.star-type3 {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 2px 0 white;
+  box-shadow: 0 0 2px 0 white;
+  animation: twinkle_three 7s ease-in-out infinite;
 }

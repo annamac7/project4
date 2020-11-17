@@ -7,7 +7,7 @@
     "img_2": "img/ef.jpg",
     "cat": "Landmark",
     "arr": "7",
-    "details": "",
+    "details": "The most recognizable and infamous land mark in all of Paris, once you see it for yourself there’s no denying why it is marveled across the globe. Visitors can buy tickets to travel up to the top to get a bird’s eye view of the entire city. Or if heights aren’t your thing, you can enjoy a nice picnic on the lawn in front of the tower. Stick around for sunset in order to see an exciting light show as well. ",
     "code": 1
   },
   {
@@ -103,7 +103,7 @@
     "lat": 48.8841,
     "lng": 2.3323,
     "img": "img/paris-05.png",
-    "img_2": "img/mr.jpg",
+    "img_2": "img/mr.jpeg",
     "cat": "Theater",
     "arr": "18",
     "details": "",

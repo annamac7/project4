@@ -1,3 +1,5 @@
+
+// calls initMap
 function resolveAfter5Sec() {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -7,6 +9,8 @@ function resolveAfter5Sec() {
   });
 }
 
+//async get data
+//calls loadData
 async function getData() {
   console.log("get data")
 
@@ -20,18 +24,21 @@ let data = [];
 let hasAppended = false;
 
 
+//calls getData
 $(document).ready(function() {
   console.log('ready! line');
-  getData()
+  getData();
+  generateStars();
 });
 
-
+//loads data and saves it in data array when parse is called
 function loadData() {
   $.getJSON("data.json", function(places) {
     parseData(places);
 
   });
 }
+
 
 function parseData(places) {
   $.each(places, function(i) {
@@ -40,6 +47,7 @@ function parseData(places) {
   // console.log(markers)
 }
 
+//creates google map
 function initMap() {
   console.log(data)
   var styleArray = [{
@@ -338,31 +346,26 @@ function initMap() {
     markerArr[i].addListener("click", () => {
       //display a model
       console.log(markerArr[i].id)
-      disaplyModal(markerArr[i].id)
+      markerClick(markerArr[i].id)
       map.setCenter(markerArr[i].getPosition());
     });
   }
 
 }
 
-
-
-
-
-
-function disaplyModal(place) {
+//displays the card on marker click
+function markerClick(place) {
   console.log(place)
   let currPlace = data.find(k => k.name == place)
   console.log(currPlace)
-  let modal = $(`<div class="card expandedCard myCard position-absolute"  style="width: 14rem" id="hasCard" style="width: 18rem;">
+  let modal = $(`<div class="card expandedCard myCard position-absolute shadow"  style="width: 14rem" id="hasCard" style="width: 18rem;">
   <a href="#"><i id="closeCard" class="far m-3 float-right fa-times-circle"></i></a>
-  <img src="${currPlace.img}" class="card-img-top" alt="${currPlace.name}">
+  <img src="${currPlace.img_2}" class="card-img-top" alt="${currPlace.name}">
   <div class="card-body">
     <h5 class="card-title">${currPlace.name}</h5>
     <p class="card-text text-muted">Arrodisments: ${currPlace.arr}</p>
 
     <p class="card-text"><small class="text-muted">Lat: ${currPlace.lat} | Long: ${currPlace.lng}</small></p>
-    <p class="card-text">${currPlace.details}</p>
     <a href="#" class="myBtn btn" title="${currPlace.code}" id="triggerModal">Learn More</a>
   </div>
 </div>`);
@@ -378,6 +381,8 @@ function disaplyModal(place) {
 }
 
 
+
+//shows big modal
 $(document).on('click', '#triggerModal', function(event) {
 
   event.preventDefault();
@@ -389,9 +394,9 @@ console.log(currPlace)
             <a href="#"><i style="color: #272643" id="closeModal" class="far fa-times-circle fa-2x float-right m-3"></i></a>
       <div class="jumbotron">
 
-        <img src="${currPlace.img_2}" class="rounded float-left img-thumbnail" alt="${currPlace.name}"/>
+        <img src="${currPlace.img_2}" class="rounded float-left img-thumbnail my-4" alt="${currPlace.name}"/>
         <h1 class="display-4">${currPlace.name}</h1>
-        <p class="lead">${currPlace.details}</p>
+        <p >${currPlace.details}</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
       </div>
@@ -399,13 +404,13 @@ console.log(currPlace)
   $("#modalHere").append(bigModal);
 });
 
-
+//closes modal
 $(document).on('click', '#closeModal', function(){
   event.preventDefault();
   $('.myModal').fadeOut("fast");
 })
 
-
+//shows list view
 $(document).on('click', '#listView', function(){
   // $('#cardGrid').css("display", "flex");
 //add an if statement so it doesnt get appended each time
@@ -418,9 +423,9 @@ $(document).on('click', '#listView', function(){
   } else {
   for(let i=0; i < data.length; i++){
     let card = $(`
-      <div class="col mb-4"><div class="card shadow">
+      <div class="col mb-4"><div class="card hvr-glow shadow">
 
-    <img src="${data[i].img}" class="card-img-top mx-auto" alt="${data[i].name}">
+    <img src="${data[i].img_2}" class="card-img-top mx-auto" alt="${data[i].name}">
     <div class="card-body">
       <h5 class="card-title">${data[i].name}</h5>
       <p class="card-text text-muted">Arrodisments: ${data[i].arr}</p>
@@ -435,14 +440,43 @@ $(document).on('click', '#listView', function(){
   hasAppended = true;
 });
 
+//toggles map view
 $(document).on('click', '#mapView', function(){
   event.preventDefault();
   $('#map').css("display", "block");
   $('#cardGrid').css("display", "none");
 });
 
+//closes marker card
 $(document).on('click', '#closeCard', function(){
   event.preventDefault();
   $('.myCard').fadeOut("fast");
   $('.myCard').remove()
 });
+
+
+
+// inspired by https://jsfiddle.net/psullivan6/ma6e78m0/
+var generateStars = function(){
+
+    var $galaxy = $(".galaxy");
+    var iterator = 0;
+
+    while (iterator <= 100){
+        var xposition = Math.random();
+        var yposition = Math.random();
+        var star_type = Math.floor((Math.random() * 3) + 1);
+        var position = {
+            "x" : $galaxy.width() * xposition,
+            "y" : $galaxy.height() * yposition,
+        };
+
+        $('<div class="star star-type' + star_type + '"></div>').appendTo($galaxy).css({
+            "top" : position.y,
+            "left" : position.x
+        });
+
+        iterator++;
+    }
+
+};

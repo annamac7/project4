@@ -25,7 +25,9 @@
     <div id="hero-title">
       <h3>Explore...</h3>
       <h1>PARIS</h1>
-      <i class="fas fa-arrow-down"></i>
+      <div id="arrow-container">
+        <a href="#myTarget"><i id="arrow" class="fas fa-angle-double-down fa-3x"></i></a>
+      </div>
 
 
     </div>
@@ -38,33 +40,36 @@
     </div>
   </div>
   <div class="black-bg p-5">
-    <img id="outline" class="mx-auto" src="img/line.png" alt="outline"/>
+    <div class="galaxy">
+      <img id="outline" class="mx-auto" src="img/line.png" alt="outline" />
+    </div>
     <!-- more margin -->
-    <P class="text-center px-5">
-    While you will never be short of things to do while visiting Paris, there are some spots that you don't want to miss. From the Eiffel Tower to the Grand Palais, we have provided you with the must know information for your next <em>grand voyage</em> Explore the locations below to find out more.
+    <P id="myTarget" class="text-center px-5">
+      While you will never be short of things to do while visiting Paris, there are some spots that you don't want to miss. From the Eiffel Tower to the Grand Palais, we have provided you with the must know information for your next <em>grand
+        voyage</em> Explore the locations below to find out more.
     </P>
     <div class="container d-flex justify-content-center my-5">
-      <button type="button" id="mapView" class="myBtn m-2 btn btn-lg">Map View</button>
-      <button type="button" id="listView" class="myBtn m-2 btn  btn-lg">List View</button>
+      <button type="button" id="mapView" class="myBtn m-2 btn btn-lg hvr-push">Map View</button>
+      <button type="button" id="listView" class="myBtn m-2 btn  btn-lg hvr-push">List View</button>
     </div>
-      <div id="map" class="my-5"></div>
-      <div id="cardGrid" class="row row-cols-1 row-cols-md-3 w-75 mx-auto">
+    <div id="map" class="my-5"></div>
+    <div id="cardGrid" class="row row-cols-1 row-cols-md-3 w-75 mx-auto">
 
 
-  </div>
+    </div>
 
 
 
 
-  <!--The div element for the map -->
+    <!--The div element for the map -->
 
 
-  <div id="modal"></div>
+    <div id="modal"></div>
 
 
-  <div id="modalHere">
+    <div id="modalHere">
 
-  </div>
+    </div>
   </div>
 
 
