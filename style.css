@@ -5,8 +5,13 @@
 #map {
   height: 700px;
   /* The height is 400 pixels */
-  width: 90%;
+  width: 100%;
   margin: auto;
+
+}
+
+.bigMargin {
+  margin-top: 100px;
 }
 
 .animate {
@@ -109,6 +114,133 @@ h5 {
   color: white;
 }
 
+.myAccent {
+  width: 75%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.myAccent div {
+  width: 40%;
+  height: 100%;
+}
+
+.accent-container {
+  position: relative;
+}
+
+.accent-img {
+  z-index: 2 !important;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+}
+
+.accent-bg {
+  position: absolute;
+  background: url("../img/pattern.png");
+  top: 20px;
+  opacity: .7;
+  background-position: center;
+  background-size: cover;
+  z-index: 0 !important;
+}
+
+#right-accent div {
+  right: 0px;
+  top: -70px;
+}
+
+#right-accent .accent-bg {
+  right: -20px;
+  top: -50px;
+}
+
+#right-accent .accent-img {
+  background: url("../img/accent1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#left-accent .accent-img {
+  background: url("../img/accent2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#left-accent .accent-bg {
+  left: 20px;
+}
+
+
+
+/* parallax */
+
+
+/* inspired by https://www.w3schools.com/howto/howto_css_switch.asp  */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .myCard {
   top: 1500px;
   left: 200px;
@@ -134,13 +266,18 @@ h5 {
   background: #edf3f3;
   height: 70vh;
   position: absolute;
-  top: 1300px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
   color: #1e1f21;
+}
+
+.img-thumbnail {
+  border: none;
+  width: 500px;
+  border-radius: 3px;
 }
 
 .card-title {
@@ -152,7 +289,11 @@ h5 {
 }
 
 .modalImg {
-  max-width: 300px;
+  width: 300px;
+}
+
+.myLine {
+  width: 100%;
 }
 
 .card {
@@ -176,16 +317,14 @@ h5 {
   border-radius: 50%;
 }
 
- .myBtn {
+.myBtn {
   background: #1e1f21 !important;
 }
 
- .myBtn:hover {
+.myBtn:hover {
   background: white !important;
   border: 1px solid #1e1f21;
 }
-
-
 
 /* galaxy inpired by https://jsfiddle.net/psullivan6/ma6e78m0/*/
 @keyframes twinkle_one {
@@ -244,7 +383,7 @@ h5 {
 
 .galaxy {
   z-index: 1;
-width: 100%;
+  width: 100%;
   overflow: hidden;
   left: 0;
   right: 0;
@@ -272,9 +411,7 @@ width: 100%;
   width: 2px;
   height: 2px;
   border-radius: 2px;
-
   box-shadow: 0 0 2px 1px white;
-
   animation: twinkle_two 12s ease-in-out infinite;
 }
 
@@ -285,4 +422,33 @@ width: 100%;
   -webkit-box-shadow: 0 0 2px 0 white;
   box-shadow: 0 0 2px 0 white;
   animation: twinkle_three 7s ease-in-out infinite;
+}
+
+.ml12 {
+  font-weight: 200;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+/* TODO: media query img-thumbnail = smaller than 3000 */
+@media only screen and (max-width: 768px) {
+  .img-thumbnail {
+    width: 200px;
+    margin: auto
+  }
+
+  #hero-title h1 {
+    font-size: 8em;
+  }
+
+  .jumbotron h1 {
+    font-size: 34px;
+  }
 }

@@ -7,18 +7,18 @@
     "img_2": "img/ef.jpg",
     "cat": "Landmark",
     "arr": "7",
-    "details": "The most recognizable and infamous land mark in all of Paris, once you see it for yourself there’s no denying why it is marveled across the globe. Visitors can buy tickets to travel up to the top to get a bird’s eye view of the entire city. Or if heights aren’t your thing, you can enjoy a nice picnic on the lawn in front of the tower. Stick around for sunset in order to see an exciting light show as well. ",
+    "details": "The most recognizable and infamous land mark in all of Paris, once you see it for yourself there’s no denying why it is marveled across the globe. Visitors can buy tickets to travel up to the top to get a bird’s eye view of the entire city. Or if heights aren’t your thing, you can enjoy a nice picnic on the lawn in front of the tower. Stick around for sunset in order to see an exciting light show as well.",
     "code": 1
   },
   {
-    "name": "Lourve",
+    "name": "The Lourve",
     "lat": 48.861,
     "lng": 2.3376,
     "img": "img/paris-03.png",
     "img_2": "img/lourve.jpg",
     "cat": "Museum",
     "arr": "1",
-    "details": "",
+    "details": "The Lourve is the largest art museum in the world. It's most notable piece is the Mona List by Da Vinci. The museum contains traditional Egyptian, Greek, Etruscan, Roman, Islamic, and Near Eastern artworks. The museum itself is unique in its architechture which is built as a glass pyramid. Other works to see here include: the statue of <em>Venus de Milo</em>, <em>Winged Victory of Samothrace</em>, and <em>Liberty Leading the People</em>. Visit the <a href='https://www.louvre.fr/en'>Lourve's official site</a> to learn more about their art collection. ",
     "code": 2
   },
   {
@@ -29,7 +29,7 @@
     "img_2": "img/nd.jpg",
     "cat": "Chruch",
     "arr": "4",
-    "details": "",
+    "details": "While currently under construction to repair damage from a fire in 2019, Notre Dame is still a beautiful site you will want to see. It is arguably the most infamous church in the city of Paris. And was the inspiration for novel <em>The Hunchback Notre Dame</em>. The architecture falls within the style of French Gothic and was one of the first prominent building featuring the flying buttress.  ",
     "code": 3
   },
   {
@@ -38,20 +38,20 @@
     "lng": 2.295,
     "img": "img/paris-02.png",
     "img_2": "img/adt.jpg",
-    "cat": "Landmark",
+    "cat": "Monument",
     "arr": "8",
-    "details": "",
+    "details": "Located at the end of the famous Champs-Élsées. The Arc de Triomphe is another prominent Paris monument. The monument honors those who dies in The French Revolution and Napoleonic Wars. Tourists are able to visit the top of the Arc to get a 360 view of all of Paris.",
     "code": 4
   },
   {
-    "name": "Sacre-Coeur",
+    "name": "Sacré-Cœur",
     "lat": 48.8867,
     "lng": 2.3431,
     "img": "img/paris-11.png",
     "img_2": "img/sc.jpg",
     "cat": "Church",
     "arr": "18",
-    "details": "",
+    "details": "Sacré-Cœur is located at the top of Montmarte, making it the highest point in Paris. It's quite the hike up to the Basillica, but the view is more than worth it. Additionally the walk takes you through the historic neighborhood of Montmarte which was the home of many early 20th century artists (Picasso, Monet, Van Gogh, Degas... and many more).",
     "code": 5
   },
   {
@@ -62,7 +62,7 @@
     "img_2": "img/gp.jpg",
     "cat": "Palace",
     "arr": "8",
-    "details": "",
+    "details": "Located along the Champs-Élysées, the beautiful architecture of the Grand Palais is hard to miss. In addition to being beautiful from the outside, this palace functions as a historic site, exhibition hall, and museum. It has played many roles in French history throughout the years. Traveel across the street to visit the Ponte Alexandre, one of Paris's most famous bridges.",
     "code": 6
   },
   {
@@ -73,30 +73,30 @@
     "img_2": "img/tg.jpg",
     "cat": "Garden",
     "arr": "1",
-    "details": "",
+    "details": "One of the biggest perks of seeing Paris by foot, is having the opportunity to walk through its many public gardens. Whether you are strolling through on the way from the Concorde to the Lourve or finding a bench to sit and rest your legs, the Tuleries Garden is a must visit. Within the garden you can find a few cafes to stop for a cup of coffee. You can also swing by the Musée de L'Orangerie to see Monet's Water Lilies. ",
     "code": 7
   },
   {
-    "name": "Musee d'Orsay",
+    "name": "Musée d'Orsay",
     "lat": 48.8600,
     "lng": 2.3266,
     "img": "img/paris-07.png",
     "img_2": "img/mo.jpg",
     "cat": "Museum",
     "arr": "6",
-    "details": "",
+    "details": "Built inside of an old railway station Musée d'Orsay is a beautiful building in itself. The museum is home to the largest collection of impressionist and post-impressionist art, including those by Monet, Manet, Van Gogh, and many more. Famous works include: <em>Self-Portrait</em> by Van Gogh, <em>The Circus</em> by Seurat, and <em>The Card Players</em> Cézanne.",
     "code": 8
   },
   {
-    "name": "Centre Pompcodeou",
+    "name": "Centre Pompidou",
     "lat": 48.8606,
     "lng": 2.3522,
     "img": "img/paris-08.png",
     "img_2": "img/pc.jpg",
     "cat": "Museum",
     "arr": "3",
-    "details": "",
-    "code": 9
+    "details": "The Centre Pompidou is a modern art museum with a post-modern architecture. It is one of the largest modern art museums in Europe. Some of the art in the museum is very untraditional and a visit to this art museum is sure to make you rethink your impression of abstract art. ",
+    "code": 4
   },
   {
     "name": "Moulin Rouge",
@@ -104,9 +104,9 @@
     "lng": 2.3323,
     "img": "img/paris-05.png",
     "img_2": "img/mr.jpeg",
-    "cat": "Theater",
+    "cat": "Cabaret",
     "arr": "18",
-    "details": "",
+    "details": "Moulin Rouge is the most infamous site of cabaret in Paris. It's noticable red windmill is hard to miss when walking through the 18th arrondissement. It was at Moulin Rouge where the 'can-can' originated. A 2001 film and 2018 musical have been produced based on the history of cabaret and dance at this famous theater.",
     "code": 10
   },
   {
@@ -115,9 +115,9 @@
     "lng": 2.3316,
     "img": "img/paris-10.png",
     "img_2": "img/pg.jpg",
-    "cat": "Opera",
-    "arr": "2",
-    "details": "",
+    "cat": "Opera House",
+    "arr": "9",
+    "details": "The Palais Garnier is the building of the Paris Opera. Tourists don't have to attend a show to see the decoaritve interior of this historic building. It is open during the day for tours. This Opera house was also the setting for <em>The Phantom of the Opera</em>. If you end up not taking the tour, the steps of the Palais Garnier are a great place to rest your feet and bask in the sun for a bit.",
     "code": 11
   },
   {
@@ -126,9 +126,9 @@
     "lng": 2.3372,
     "img": "img/paris-12.png",
     "img_2": "img/lg.jpg",
-    "cat": "",
+    "cat": "Garden",
     "arr": "6",
-    "details": "",
+    "details": "Similar to the Tuileries Gardens, the Gardins of Luxembourg is another public park that you should be sure to makee a visit to. These gardens surround Luxembourg Palace and have an great view of the French Pantheon. Another great spot to spend a relaxing afternoon walking around or sitting and people watching. There are also several athletic courts in the garden if you are feeling sporty. ",
     "code": 12
   }
 ]
